@@ -1,0 +1,32 @@
+#%RAML 0.8
+title: Adverts and recommendations API
+version: 1.0
+baseUri: http://psd2-ads.cloudhub.io/api
+
+/ads:
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            example: |
+              [
+                  {
+                    "datetime": "2016-07-14 12:34",
+                    "description": "Personal Loan",
+                    "type": "advert",
+                    "link": "#loans/start"
+                  },
+                  {
+                    "datetime": "2016-07-14 12:34",
+                    "description": "Get travel insurance",
+                    "type": "recommendation",
+                    "link": "#insurance/start"
+                  },
+                  {
+                    "datetime": "2017-01-01 12:00",
+                    "description": "Home insurance renew",
+                    "type": "renewal",
+                    "link": "#insurance/dashboard"
+                  }
+                ]
